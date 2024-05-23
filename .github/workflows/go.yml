@@ -33,3 +33,5 @@ jobs:
         files: 'WinCryptSSHAgent*.exe'
         draft: true
         prerelease: true
+        artifacts: >
+          'WinCryptSSHAgent.exe'
