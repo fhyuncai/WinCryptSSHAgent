@@ -25,9 +25,8 @@ jobs:
       run: build.bat
 
     - name: Upload Release
+      if: ${{ startsWith(github.ref, 'refs/tags/') }}
       uses: ncipollo/release-action@v1
       with:
-        files: 'WinCryptSSHAgent*.exe'
-        allowUpdates: true
-        artifacts: >
-          'WinCryptSSHAgent.exe'
+        artifacts: "WinCryptSSHAgent*.exe"
+        token: ${{ secrets.TOKEN }}
