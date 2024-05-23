@@ -28,4 +28,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        artifacts: "WinCryptSSHAgent*.exe"
+        name: "WinCryptSSHAgent"
+        path: "WinCryptSSHAgent*.exe"
